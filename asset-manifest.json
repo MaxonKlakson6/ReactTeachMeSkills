@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/ReactTeachMeSkills/static/css/main.33d049dd.css",
+    "main.js": "/ReactTeachMeSkills/static/js/main.8ea0113b.js",
+    "static/js/787.30cc9658.chunk.js": "/ReactTeachMeSkills/static/js/787.30cc9658.chunk.js",
+    "static/media/numbers.png": "/ReactTeachMeSkills/static/media/numbers.855a289fa193f43c6212.png",
+    "index.html": "/ReactTeachMeSkills/index.html",
+    "static/media/plus-solid.svg": "/ReactTeachMeSkills/static/media/plus-solid.5151974a6ca290b7f86587b345000d39.svg",
+    "static/media/0-solid.svg": "/ReactTeachMeSkills/static/media/0-solid.9f819d1fb7b6a0d75564338ce5788c21.svg",
+    "static/media/minus-solid.svg": "/ReactTeachMeSkills/static/media/minus-solid.bcec360597d65c0d0ad37f3e11e594aa.svg",
+    "main.33d049dd.css.map": "/ReactTeachMeSkills/static/css/main.33d049dd.css.map",
+    "main.8ea0113b.js.map": "/ReactTeachMeSkills/static/js/main.8ea0113b.js.map",
+    "787.30cc9658.chunk.js.map": "/ReactTeachMeSkills/static/js/787.30cc9658.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33d049dd.css",
+    "static/js/main.8ea0113b.js"
+  ]
+}
