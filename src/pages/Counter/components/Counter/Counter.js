@@ -10,8 +10,8 @@ import background from "static/background/numbers.png";
 import styles from "pages/Counter/components/Counter/Counter.module.scss";
 import colors from "static/colors/colors.scss";
 
-const Counter = ({ count, parity, onIncrement, onDecrement, onReset }) => {
-  const changeBackground = parity && colors.outputWindowIfEven;
+const Counter = ({ count, isEven, onIncrement, onDecrement, onReset }) => {
+  const changeBackground = isEven ? colors.outputWindowIfEven : "";
 
   return (
     <div
@@ -29,28 +29,28 @@ const Counter = ({ count, parity, onIncrement, onDecrement, onReset }) => {
           className={styles.outputWindow}
           style={{ background: changeBackground }}
         >
-          {parity ? "Number is even" : "Number is odd"}
+          {isEven ? "Number is even" : "Number is odd"}
         </div>
       </div>
 
       <div className={styles.buttonHolder}>
         <Button
           className={styles.counterButton}
-          background={changeBackground}
+          backgroundWhenNumberIsEven={changeBackground}
           imageSource={minus}
           alt="minus"
           callBack={onDecrement}
         />
         <Button
           className={styles.counterButton}
-          background={changeBackground}
+          backgroundWhenNumberIsEven={changeBackground}
           imageSource={zero}
           alt="reset"
           callBack={onReset}
         />
         <Button
           className={styles.counterButton}
-          background={changeBackground}
+          backgroundWhenNumberIsEven={changeBackground}
           imageSource={plus}
           alt="plus"
           callBack={onIncrement}
@@ -62,7 +62,7 @@ const Counter = ({ count, parity, onIncrement, onDecrement, onReset }) => {
 
 Counter.propTypes = {
   count: PropTypes.number,
-  parity: PropTypes.bool,
+  isEven: PropTypes.bool,
   onIncrement: PropTypes.func,
   onDecrement: PropTypes.func,
   onReset: PropTypes.func,

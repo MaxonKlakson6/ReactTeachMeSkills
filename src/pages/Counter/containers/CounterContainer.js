@@ -8,7 +8,7 @@ class CounterContainer extends Component {
 
     this.state = {
       count: 0,
-      countParity: true,
+      isEven: true,
     };
   }
 
@@ -19,30 +19,32 @@ class CounterContainer extends Component {
       const nextCount = prevState.count + 1;
       return {
         count: nextCount,
-        countParity: this.isEven(nextCount),
+        isEven: this.isEven(nextCount),
       };
     });
   };
 
   handleDecrement = () => {
-    this.setState((prevState) => {
-      const nextCount = prevState.count === 0 ? 0 : prevState.count - 1;
-      return {
-        count: nextCount,
-        countParity: this.isEven(nextCount),
-      };
-    });
+    if (this.state.count !== 0) {
+      this.setState((prevState) => {
+        const nextCount = prevState.count - 1;
+        return {
+          count: nextCount,
+          isEven: this.isEven(nextCount),
+        };
+      });
+    }
   };
 
   handleReset = () => {
-    this.setState({ count: 0, countParity: true });
+    this.setState({ count: 0, isEven: true });
   };
 
   render() {
     return (
       <Counter
         count={this.state.count}
-        parity={this.state.countParity}
+        isEven={this.state.isEven}
         onIncrement={this.handleIncrement}
         onDecrement={this.handleDecrement}
         onReset={this.handleReset}

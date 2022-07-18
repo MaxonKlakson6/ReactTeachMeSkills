@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
 
-const Button = ({ className, background, imageSource, alt, callBack }) => {
+const Button = ({
+  className,
+  backgroundWhenNumberIsEven,
+  imageSource,
+  alt,
+  callBack,
+}) => {
   return (
     <button
       className={className}
       onClick={callBack}
-      style={{ background: background }}
+      style={{ background: backgroundWhenNumberIsEven }}
     >
       <img src={imageSource} alt={alt} />
     </button>
@@ -14,7 +20,7 @@ const Button = ({ className, background, imageSource, alt, callBack }) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  background: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  backgroundWhenNumberIsEven: PropTypes.string,
   imageSource: PropTypes.string,
   alt: PropTypes.string,
   callBack: PropTypes.func,
