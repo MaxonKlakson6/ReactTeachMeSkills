@@ -1,0 +1,44 @@
+$oddBackground: rgba(42, 164, 164, 0.4);
+
+@mixin containersStyles {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 400px;
+  padding: 30px;
+  font-size: 20px;
+  border: 2px solid #6e6f6f;
+  border-radius: 10px;
+
+  .screenHolder {
+    @include containersStyles;
+
+    .outputWindow {
+      min-width: 100px;
+      padding: 10px;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #fff;
+      background: $oddBackground;
+      border-radius: 5px;
+    }
+  }
+
+  .buttonHolder {
+    @include containersStyles;
+
+    .counterButton {
+      padding: 10px;
+      border: 0;
+      background-color: $oddBackground;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:nth-child(2) {
+        margin: 0 100px;
+      }
+    }
+  }
+}
